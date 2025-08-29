@@ -1,0 +1,206 @@
+[
+  {
+    "id": 986,
+    "name": "brute-bonnet",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "level": 50,
+    "ability": "protosynthesis",
+    "item": "sitrus-berry",
+    "stats": {
+      "hp": 218,
+      "attack": 148,
+      "defense": 151,
+      "special-attack": 99,
+      "special-defense": 119,
+      "speed": 75
+    },
+    "current_hp": 218,
+    "evs": {
+      "hp": 252,
+      "defense": 252,
+      "special-attack": 0,
+      "attack": 4,
+      "special-defense": 0,
+      "speed": 0
+    },
+    "moves": [
+      "seed-bomb",
+      "sucker-punch",
+      "spore",
+      "rage-powder"
+    ]
+  },
+  {
+    "id": 792,
+    "name": "lunala",
+    "types": [
+      "psychic",
+      "ghost"
+    ],
+    "level": 50,
+    "ability": "shadow-shield",
+    "item": "power-herb",
+    "stats": {
+      "hp": 244,
+      "attack": 133,
+      "defense": 109,
+      "special-attack": 189,
+      "special-defense": 128,
+      "speed": 117
+    },
+    "current_hp": 244,
+    "evs": {
+      "hp": 252,
+      "attack": 0,
+      "defense": 0,
+      "special-attack": 252,
+      "special-defense": 4,
+      "speed": 0
+    },
+    "moves": [
+      "moongeist-beam",
+      "meteor-beam",
+      "wide-guard",
+      "trick-room"
+    ]
+  },
+  {
+    "id": 901,
+    "name": "ursaluna",
+    "types": [
+      "ground",
+      "normal"
+    ],
+    "level": 50,
+    "ability": "guts",
+    "item": "flame-orb",
+    "stats": {
+      "hp": 237,
+      "attack": 192,
+      "defense": 126,
+      "special-attack": 65,
+      "special-defense": 100,
+      "speed": 70
+    },
+    "current_hp": 237,
+    "evs": {
+      "hp": 252,
+      "special-attack": 0,
+      "speed": 0,
+      "attack": 252,
+      "defense": 4,
+      "special-defense": 0
+    },
+    "moves": [
+      "headlong-rush",
+      "facade",
+      "earthquake",
+      "protect"
+    ]
+  },
+  {
+    "id": 1004,
+    "name": "chi-yu",
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "level": 50,
+    "ability": "beads-of-ruin",
+    "item": "choice-scarf",
+    "stats": {
+      "hp": 131,
+      "attack": 100,
+      "defense": 100,
+      "special-attack": 187,
+      "special-defense": 140,
+      "speed": 152
+    },
+    "current_hp": 131,
+    "evs": {
+      "hp": 4,
+      "attack": 0,
+      "defense": 0,
+      "special-attack": 252,
+      "special-defense": 0,
+      "speed": 252
+    },
+    "moves": [
+      "dark-pulse",
+      "heat-wave",
+      "overheat",
+      "snarl"
+    ]
+  },
+  {
+    "id": 1007,
+    "name": "koraidon",
+    "types": [
+      "fighting",
+      "dragon"
+    ],
+    "level": 50,
+    "ability": "orichalcum-pulse",
+    "item": "life-orb",
+    "stats": {
+      "hp": 176,
+      "attack": 187,
+      "defense": 135,
+      "special-attack": 105,
+      "special-defense": 120,
+      "speed": 187
+    },
+    "current_hp": 176,
+    "evs": {
+      "hp": 4,
+      "attack": 252,
+      "defense": 0,
+      "special-attack": 0,
+      "special-defense": 0,
+      "speed": 252
+    },
+    "moves": [
+      "close-combat",
+      "flare-blitz",
+      "flame-charge",
+      "protect"
+    ]
+  },
+  {
+    "id": 987,
+    "name": "flutter-mane",
+    "types": [
+      "ghost",
+      "fairy"
+    ],
+    "level": 50,
+    "ability": "protosynthesis",
+    "item": "focus-sash",
+    "stats": {
+      "hp": 131,
+      "attack": 75,
+      "defense": 75,
+      "special-attack": 187,
+      "special-defense": 155,
+      "speed": 187
+    },
+    "current_hp": 131,
+    "evs": {
+      "hp": 4,
+      "attack": 0,
+      "defense": 0,
+      "special-attack": 252,
+      "special-defense": 0,
+      "speed": 252
+    },
+    "moves": [
+      "shadow-ball",
+      "moonblast",
+      "icy-wind",
+      "protect"
+    ]
+  }
+]

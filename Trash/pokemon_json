@@ -1,0 +1,1463 @@
+[
+  {
+    "name": "amoonguss",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 114,
+      "attack": 85,
+      "defense": 70,
+      "special-attack": 85,
+      "special-defense": 80,
+      "speed": 30
+    },
+    "abilities": [
+      "effect-spore",
+      "regenerator"
+    ],
+    "moves": [
+      {
+        "name": "body-slam",
+        "type": "normal",
+        "power": 85,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "hyper-beam",
+        "type": "normal",
+        "power": 150,
+        "accuracy": 90,
+        "category": "special"
+      },
+      {
+        "name": "absorb",
+        "type": "grass",
+        "power": 20,
+        "accuracy": 100,
+        "category": "special"
+      },
+      {
+        "name": "mega-drain",
+        "type": "grass",
+        "power": 40,
+        "accuracy": 100,
+        "category": "special"
+      }
+    ],
+    "id": 591
+  },
+  {
+    "name": "calyrex-ice",
+    "types": [
+      "psychic",
+      "ice"
+    ],
+    "base_stats": {
+      "hp": 100,
+      "attack": 165,
+      "defense": 150,
+      "special-attack": 85,
+      "special-defense": 130,
+      "speed": 50
+    },
+    "abilities": [
+      "as-one-glastrier"
+    ],
+    "moves": [
+      {
+        "name": "pound",
+        "type": "normal",
+        "power": 40,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "pay-day",
+        "type": "normal",
+        "power": 40,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "swords-dance",
+        "type": "normal",
+        "power": null,
+        "accuracy": null,
+        "category": "status"
+      },
+      {
+        "name": "stomp",
+        "type": "normal",
+        "power": 65,
+        "accuracy": 100,
+        "category": "physical"
+      }
+    ],
+    "id": 10193
+  },
+  {
+    "name": "calyrex-shadow",
+    "types": [
+      "psychic",
+      "ghost"
+    ],
+    "base_stats": {
+      "hp": 100,
+      "attack": 85,
+      "defense": 80,
+      "special-attack": 165,
+      "special-defense": 100,
+      "speed": 150
+    },
+    "abilities": [
+      "as-one-spectrier"
+    ],
+    "moves": [
+      {
+        "name": "pound",
+        "type": "normal",
+        "power": 40,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "pay-day",
+        "type": "normal",
+        "power": 40,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "stomp",
+        "type": "normal",
+        "power": 65,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "double-kick",
+        "type": "fighting",
+        "power": 30,
+        "accuracy": 100,
+        "category": "physical"
+      }
+    ],
+    "id": 10194
+  },
+  {
+    "name": "chi-yu",
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "base_stats": {
+      "hp": 55,
+      "attack": 80,
+      "defense": 80,
+      "special-attack": 135,
+      "special-defense": 120,
+      "speed": 100
+    },
+    "abilities": [
+      "beads-of-ruin"
+    ],
+    "moves": [
+      {
+        "name": "take-down",
+        "type": "normal",
+        "power": 90,
+        "accuracy": 85,
+        "category": "physical"
+      },
+      {
+        "name": "ember",
+        "type": "fire",
+        "power": 40,
+        "accuracy": 100,
+        "category": "special"
+      },
+      {
+        "name": "flamethrower",
+        "type": "fire",
+        "power": 90,
+        "accuracy": 100,
+        "category": "special"
+      },
+      {
+        "name": "hyper-beam",
+        "type": "normal",
+        "power": 150,
+        "accuracy": 90,
+        "category": "special"
+      }
+    ],
+    "id": 1004
+  },
+  {
+    "name": "chien-pao",
+    "types": [
+      "dark",
+      "ice"
+    ],
+    "base_stats": {
+      "hp": 80,
+      "attack": 120,
+      "defense": 80,
+      "special-attack": 90,
+      "special-defense": 65,
+      "speed": 135
+    },
+    "abilities": [
+      "sword-of-ruin"
+    ],
+    "moves": [
+      {
+        "name": "swords-dance",
+        "type": "normal",
+        "power": null,
+        "accuracy": null,
+        "category": "status"
+      },
+      {
+        "name": "take-down",
+        "type": "normal",
+        "power": 90,
+        "accuracy": 85,
+        "category": "physical"
+      },
+      {
+        "name": "mist",
+        "type": "ice",
+        "power": null,
+        "accuracy": null,
+        "category": "status"
+      },
+      {
+        "name": "blizzard",
+        "type": "ice",
+        "power": 110,
+        "accuracy": 70,
+        "category": "special"
+      }
+    ],
+    "id": 1002
+  },
+  {
+    "name": "farigiraf",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "base_stats": {
+      "hp": 120,
+      "attack": 90,
+      "defense": 70,
+      "special-attack": 110,
+      "special-defense": 70,
+      "speed": 60
+    },
+    "abilities": [
+      "cud-chew",
+      "armor-tail",
+      "sap-sipper"
+    ],
+    "moves": [
+      {
+        "name": "stomp",
+        "type": "normal",
+        "power": 65,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "tackle",
+        "type": "normal",
+        "power": 40,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "body-slam",
+        "type": "normal",
+        "power": 85,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "take-down",
+        "type": "normal",
+        "power": 90,
+        "accuracy": 85,
+        "category": "physical"
+      }
+    ],
+    "id": 981
+  },
+  {
+    "name": "flutter-mane",
+    "types": [
+      "ghost",
+      "fairy"
+    ],
+    "base_stats": {
+      "hp": 55,
+      "attack": 55,
+      "defense": 55,
+      "special-attack": 135,
+      "special-defense": 135,
+      "speed": 135
+    },
+    "abilities": [
+      "protosynthesis"
+    ],
+    "moves": [
+      {
+        "name": "psybeam",
+        "type": "psychic",
+        "power": 65,
+        "accuracy": 100,
+        "category": "special"
+      },
+      {
+        "name": "hyper-beam",
+        "type": "normal",
+        "power": 150,
+        "accuracy": 90,
+        "category": "special"
+      },
+      {
+        "name": "thunderbolt",
+        "type": "electric",
+        "power": 90,
+        "accuracy": 100,
+        "category": "special"
+      },
+      {
+        "name": "thunder-wave",
+        "type": "electric",
+        "power": null,
+        "accuracy": 90,
+        "category": "status"
+      }
+    ],
+    "id": 987
+  },
+  {
+    "name": "grimmsnarl",
+    "types": [
+      "dark",
+      "fairy"
+    ],
+    "base_stats": {
+      "hp": 95,
+      "attack": 120,
+      "defense": 65,
+      "special-attack": 95,
+      "special-defense": 75,
+      "speed": 60
+    },
+    "abilities": [
+      "prankster",
+      "frisk",
+      "pickpocket"
+    ],
+    "moves": [
+      {
+        "name": "mega-punch",
+        "type": "normal",
+        "power": 80,
+        "accuracy": 85,
+        "category": "physical"
+      },
+      {
+        "name": "fire-punch",
+        "type": "fire",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "ice-punch",
+        "type": "ice",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "thunder-punch",
+        "type": "electric",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      }
+    ],
+    "id": 861
+  },
+  {
+    "name": "groudon",
+    "types": [
+      "ground"
+    ],
+    "base_stats": {
+      "hp": 100,
+      "attack": 150,
+      "defense": 140,
+      "special-attack": 100,
+      "special-defense": 90,
+      "speed": 90
+    },
+    "abilities": [
+      "drought"
+    ],
+    "moves": [
+      {
+        "name": "mega-punch",
+        "type": "normal",
+        "power": 80,
+        "accuracy": 85,
+        "category": "physical"
+      },
+      {
+        "name": "fire-punch",
+        "type": "fire",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "thunder-punch",
+        "type": "electric",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "swords-dance",
+        "type": "normal",
+        "power": null,
+        "accuracy": null,
+        "category": "status"
+      }
+    ],
+    "id": 383
+  },
+  {
+    "name": "incineroar",
+    "types": [
+      "fire",
+      "dark"
+    ],
+    "base_stats": {
+      "hp": 95,
+      "attack": 115,
+      "defense": 90,
+      "special-attack": 80,
+      "special-defense": 90,
+      "speed": 60
+    },
+    "abilities": [
+      "blaze",
+      "intimidate"
+    ],
+    "moves": [
+      {
+        "name": "mega-punch",
+        "type": "normal",
+        "power": 80,
+        "accuracy": 85,
+        "category": "physical"
+      },
+      {
+        "name": "pay-day",
+        "type": "normal",
+        "power": 40,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "fire-punch",
+        "type": "fire",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "thunder-punch",
+        "type": "electric",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      }
+    ],
+    "id": 727
+  },
+  {
+    "name": "iron-hands",
+    "types": [
+      "fighting",
+      "electric"
+    ],
+    "base_stats": {
+      "hp": 154,
+      "attack": 140,
+      "defense": 108,
+      "special-attack": 50,
+      "special-defense": 68,
+      "speed": 50
+    },
+    "abilities": [
+      "quark-drive"
+    ],
+    "moves": [
+      {
+        "name": "fire-punch",
+        "type": "fire",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "ice-punch",
+        "type": "ice",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "thunder-punch",
+        "type": "electric",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "swords-dance",
+        "type": "normal",
+        "power": null,
+        "accuracy": null,
+        "category": "status"
+      }
+    ],
+    "id": 992
+  },
+  {
+    "name": "koraidon",
+    "types": [
+      "fighting",
+      "dragon"
+    ],
+    "base_stats": {
+      "hp": 100,
+      "attack": 135,
+      "defense": 115,
+      "special-attack": 85,
+      "special-defense": 100,
+      "speed": 135
+    },
+    "abilities": [
+      "orichalcum-pulse"
+    ],
+    "moves": [
+      {
+        "name": "swords-dance",
+        "type": "normal",
+        "power": null,
+        "accuracy": null,
+        "category": "status"
+      },
+      {
+        "name": "body-slam",
+        "type": "normal",
+        "power": 85,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "take-down",
+        "type": "normal",
+        "power": 90,
+        "accuracy": 85,
+        "category": "physical"
+      },
+      {
+        "name": "double-edge",
+        "type": "normal",
+        "power": 120,
+        "accuracy": 100,
+        "category": "physical"
+      }
+    ],
+    "id": 1007
+  },
+  {
+    "name": "kyogre",
+    "types": [
+      "water"
+    ],
+    "base_stats": {
+      "hp": 100,
+      "attack": 100,
+      "defense": 90,
+      "special-attack": 150,
+      "special-defense": 140,
+      "speed": 90
+    },
+    "abilities": [
+      "drizzle"
+    ],
+    "moves": [
+      {
+        "name": "headbutt",
+        "type": "normal",
+        "power": 70,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "body-slam",
+        "type": "normal",
+        "power": 85,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "take-down",
+        "type": "normal",
+        "power": 90,
+        "accuracy": 85,
+        "category": "physical"
+      },
+      {
+        "name": "double-edge",
+        "type": "normal",
+        "power": 120,
+        "accuracy": 100,
+        "category": "physical"
+      }
+    ],
+    "id": 382
+  },
+  {
+    "name": "lunala",
+    "types": [
+      "psychic",
+      "ghost"
+    ],
+    "base_stats": {
+      "hp": 137,
+      "attack": 113,
+      "defense": 89,
+      "special-attack": 137,
+      "special-defense": 107,
+      "speed": 97
+    },
+    "abilities": [
+      "shadow-shield"
+    ],
+    "moves": [
+      {
+        "name": "fly",
+        "type": "flying",
+        "power": 90,
+        "accuracy": 95,
+        "category": "physical"
+      },
+      {
+        "name": "roar",
+        "type": "normal",
+        "power": null,
+        "accuracy": null,
+        "category": "status"
+      },
+      {
+        "name": "ice-beam",
+        "type": "ice",
+        "power": 90,
+        "accuracy": 100,
+        "category": "special"
+      },
+      {
+        "name": "blizzard",
+        "type": "ice",
+        "power": 110,
+        "accuracy": 70,
+        "category": "special"
+      }
+    ],
+    "id": 792
+  },
+  {
+    "name": "miraidon",
+    "types": [
+      "electric",
+      "dragon"
+    ],
+    "base_stats": {
+      "hp": 100,
+      "attack": 85,
+      "defense": 100,
+      "special-attack": 135,
+      "special-defense": 115,
+      "speed": 135
+    },
+    "abilities": [
+      "hadron-engine"
+    ],
+    "moves": [
+      {
+        "name": "swords-dance",
+        "type": "normal",
+        "power": null,
+        "accuracy": null,
+        "category": "status"
+      },
+      {
+        "name": "body-slam",
+        "type": "normal",
+        "power": 85,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "take-down",
+        "type": "normal",
+        "power": 90,
+        "accuracy": 85,
+        "category": "physical"
+      },
+      {
+        "name": "hyper-beam",
+        "type": "normal",
+        "power": 150,
+        "accuracy": 90,
+        "category": "special"
+      }
+    ],
+    "id": 1008
+  },
+  {
+    "name": "raging-bolt",
+    "types": [
+      "electric",
+      "dragon"
+    ],
+    "base_stats": {
+      "hp": 125,
+      "attack": 73,
+      "defense": 91,
+      "special-attack": 137,
+      "special-defense": 89,
+      "speed": 75
+    },
+    "abilities": [
+      "protosynthesis"
+    ],
+    "moves": [
+      {
+        "name": "stomp",
+        "type": "normal",
+        "power": 65,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "body-slam",
+        "type": "normal",
+        "power": 85,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "take-down",
+        "type": "normal",
+        "power": 90,
+        "accuracy": 85,
+        "category": "physical"
+      },
+      {
+        "name": "double-edge",
+        "type": "normal",
+        "power": 120,
+        "accuracy": 100,
+        "category": "physical"
+      }
+    ],
+    "id": 1021
+  },
+  {
+    "name": "rillaboom",
+    "types": [
+      "grass"
+    ],
+    "base_stats": {
+      "hp": 100,
+      "attack": 125,
+      "defense": 90,
+      "special-attack": 60,
+      "special-defense": 70,
+      "speed": 85
+    },
+    "abilities": [
+      "overgrow",
+      "grassy-surge"
+    ],
+    "moves": [
+      {
+        "name": "mega-punch",
+        "type": "normal",
+        "power": 80,
+        "accuracy": 85,
+        "category": "physical"
+      },
+      {
+        "name": "scratch",
+        "type": "normal",
+        "power": 40,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "swords-dance",
+        "type": "normal",
+        "power": null,
+        "accuracy": null,
+        "category": "status"
+      },
+      {
+        "name": "slam",
+        "type": "normal",
+        "power": 80,
+        "accuracy": 75,
+        "category": "physical"
+      }
+    ],
+    "id": 812
+  },
+  {
+    "name": "roaring-moon",
+    "types": [
+      "dragon",
+      "dark"
+    ],
+    "base_stats": {
+      "hp": 105,
+      "attack": 139,
+      "defense": 71,
+      "special-attack": 55,
+      "special-defense": 101,
+      "speed": 119
+    },
+    "abilities": [
+      "protosynthesis"
+    ],
+    "moves": [
+      {
+        "name": "fly",
+        "type": "flying",
+        "power": 90,
+        "accuracy": 95,
+        "category": "physical"
+      },
+      {
+        "name": "headbutt",
+        "type": "normal",
+        "power": 70,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "body-slam",
+        "type": "normal",
+        "power": 85,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "take-down",
+        "type": "normal",
+        "power": 90,
+        "accuracy": 85,
+        "category": "physical"
+      }
+    ],
+    "id": 1005
+  },
+  {
+    "name": "smeargle",
+    "types": [
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 55,
+      "attack": 20,
+      "defense": 35,
+      "special-attack": 20,
+      "special-defense": 45,
+      "speed": 75
+    },
+    "abilities": [
+      "own-tempo",
+      "technician",
+      "moody"
+    ],
+    "moves": [
+      {
+        "name": "sketch",
+        "type": "normal",
+        "power": null,
+        "accuracy": null,
+        "category": "status"
+      }
+    ],
+    "id": 235
+  },
+  {
+    "name": "sneasler",
+    "types": [
+      "fighting",
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 80,
+      "attack": 130,
+      "defense": 60,
+      "special-attack": 40,
+      "special-defense": 80,
+      "speed": 120
+    },
+    "abilities": [
+      "pressure",
+      "unburden",
+      "poison-touch"
+    ],
+    "moves": [
+      {
+        "name": "fire-punch",
+        "type": "fire",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "scratch",
+        "type": "normal",
+        "power": 40,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "swords-dance",
+        "type": "normal",
+        "power": null,
+        "accuracy": null,
+        "category": "status"
+      },
+      {
+        "name": "take-down",
+        "type": "normal",
+        "power": 90,
+        "accuracy": 85,
+        "category": "physical"
+      }
+    ],
+    "id": 903
+  },
+  {
+    "name": "terapagos",
+    "types": [
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 90,
+      "attack": 65,
+      "defense": 85,
+      "special-attack": 65,
+      "special-defense": 85,
+      "speed": 60
+    },
+    "abilities": [
+      "tera-shift"
+    ],
+    "moves": [
+      {
+        "name": "headbutt",
+        "type": "normal",
+        "power": 70,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "body-slam",
+        "type": "normal",
+        "power": 85,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "take-down",
+        "type": "normal",
+        "power": 90,
+        "accuracy": 85,
+        "category": "physical"
+      },
+      {
+        "name": "double-edge",
+        "type": "normal",
+        "power": 120,
+        "accuracy": 100,
+        "category": "physical"
+      }
+    ],
+    "id": 1024
+  },
+  {
+    "name": "ting-lu",
+    "types": [
+      "dark",
+      "ground"
+    ],
+    "base_stats": {
+      "hp": 155,
+      "attack": 110,
+      "defense": 125,
+      "special-attack": 55,
+      "special-defense": 80,
+      "speed": 45
+    },
+    "abilities": [
+      "vessel-of-ruin"
+    ],
+    "moves": [
+      {
+        "name": "whirlwind",
+        "type": "normal",
+        "power": null,
+        "accuracy": null,
+        "category": "status"
+      },
+      {
+        "name": "stomp",
+        "type": "normal",
+        "power": 65,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "body-slam",
+        "type": "normal",
+        "power": 85,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "take-down",
+        "type": "normal",
+        "power": 90,
+        "accuracy": 85,
+        "category": "physical"
+      }
+    ],
+    "id": 1003
+  },
+  {
+    "name": "torkoal",
+    "types": [
+      "fire"
+    ],
+    "base_stats": {
+      "hp": 70,
+      "attack": 85,
+      "defense": 140,
+      "special-attack": 85,
+      "special-defense": 70,
+      "speed": 20
+    },
+    "abilities": [
+      "white-smoke",
+      "drought",
+      "shell-armor"
+    ],
+    "moves": [
+      {
+        "name": "headbutt",
+        "type": "normal",
+        "power": 70,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "body-slam",
+        "type": "normal",
+        "power": 85,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "take-down",
+        "type": "normal",
+        "power": 90,
+        "accuracy": 85,
+        "category": "physical"
+      },
+      {
+        "name": "double-edge",
+        "type": "normal",
+        "power": 120,
+        "accuracy": 100,
+        "category": "physical"
+      }
+    ],
+    "id": 324
+  },
+  {
+    "name": "ursaluna",
+    "types": [
+      "ground",
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 130,
+      "attack": 140,
+      "defense": 105,
+      "special-attack": 45,
+      "special-defense": 80,
+      "speed": 50
+    },
+    "abilities": [
+      "guts",
+      "bulletproof",
+      "unnerve"
+    ],
+    "moves": [
+      {
+        "name": "fire-punch",
+        "type": "fire",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "ice-punch",
+        "type": "ice",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "thunder-punch",
+        "type": "electric",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "scratch",
+        "type": "normal",
+        "power": 40,
+        "accuracy": 100,
+        "category": "physical"
+      }
+    ],
+    "id": 901
+  },
+  {
+    "name": "urshifu-rapid-strike",
+    "types": [
+      "fighting",
+      "water"
+    ],
+    "base_stats": {
+      "hp": 100,
+      "attack": 130,
+      "defense": 100,
+      "special-attack": 63,
+      "special-defense": 60,
+      "speed": 97
+    },
+    "abilities": [
+      "unseen-fist"
+    ],
+    "moves": [
+      {
+        "name": "mega-punch",
+        "type": "normal",
+        "power": 80,
+        "accuracy": 85,
+        "category": "physical"
+      },
+      {
+        "name": "fire-punch",
+        "type": "fire",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "ice-punch",
+        "type": "ice",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "thunder-punch",
+        "type": "electric",
+        "power": 75,
+        "accuracy": 100,
+        "category": "physical"
+      }
+    ],
+    "id": 10191
+  },
+  {
+    "name": "volcarona",
+    "types": [
+      "bug",
+      "fire"
+    ],
+    "base_stats": {
+      "hp": 85,
+      "attack": 60,
+      "defense": 65,
+      "special-attack": 135,
+      "special-defense": 105,
+      "speed": 100
+    },
+    "abilities": [
+      "flame-body",
+      "swarm"
+    ],
+    "moves": [
+      {
+        "name": "gust",
+        "type": "flying",
+        "power": 40,
+        "accuracy": 100,
+        "category": "special"
+      },
+      {
+        "name": "whirlwind",
+        "type": "normal",
+        "power": null,
+        "accuracy": null,
+        "category": "status"
+      },
+      {
+        "name": "fly",
+        "type": "flying",
+        "power": 90,
+        "accuracy": 95,
+        "category": "physical"
+      },
+      {
+        "name": "body-slam",
+        "type": "normal",
+        "power": 85,
+        "accuracy": 100,
+        "category": "physical"
+      }
+    ],
+    "id": 637
+  },
+  {
+    "name": "walking-wake",
+    "types": [
+      "water",
+      "dragon"
+    ],
+    "base_stats": {
+      "hp": 99,
+      "attack": 83,
+      "defense": 91,
+      "special-attack": 125,
+      "special-defense": 83,
+      "speed": 109
+    },
+    "abilities": [
+      "protosynthesis"
+    ],
+    "moves": [
+      {
+        "name": "body-slam",
+        "type": "normal",
+        "power": 85,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "take-down",
+        "type": "normal",
+        "power": 90,
+        "accuracy": 85,
+        "category": "physical"
+      },
+      {
+        "name": "double-edge",
+        "type": "normal",
+        "power": 120,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "leer",
+        "type": "normal",
+        "power": null,
+        "accuracy": 100,
+        "category": "status"
+      }
+    ],
+    "id": 1009
+  },
+  {
+    "name": "whimsicott",
+    "types": [
+      "grass",
+      "fairy"
+    ],
+    "base_stats": {
+      "hp": 60,
+      "attack": 67,
+      "defense": 85,
+      "special-attack": 77,
+      "special-defense": 75,
+      "speed": 116
+    },
+    "abilities": [
+      "prankster",
+      "infiltrator",
+      "chlorophyll"
+    ],
+    "moves": [
+      {
+        "name": "gust",
+        "type": "flying",
+        "power": 40,
+        "accuracy": 100,
+        "category": "special"
+      },
+      {
+        "name": "hyper-beam",
+        "type": "normal",
+        "power": 150,
+        "accuracy": 90,
+        "category": "special"
+      },
+      {
+        "name": "absorb",
+        "type": "grass",
+        "power": 20,
+        "accuracy": 100,
+        "category": "special"
+      },
+      {
+        "name": "mega-drain",
+        "type": "grass",
+        "power": 40,
+        "accuracy": 100,
+        "category": "special"
+      }
+    ],
+    "id": 547
+  },
+  {
+    "name": "zacian-crowned",
+    "types": [
+      "fairy",
+      "steel"
+    ],
+    "base_stats": {
+      "hp": 92,
+      "attack": 150,
+      "defense": 115,
+      "special-attack": 80,
+      "special-defense": 115,
+      "speed": 148
+    },
+    "abilities": [
+      "intrepid-sword"
+    ],
+    "moves": [
+      {
+        "name": "swords-dance",
+        "type": "normal",
+        "power": null,
+        "accuracy": null,
+        "category": "status"
+      },
+      {
+        "name": "body-slam",
+        "type": "normal",
+        "power": 85,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "take-down",
+        "type": "normal",
+        "power": 90,
+        "accuracy": 85,
+        "category": "physical"
+      },
+      {
+        "name": "bite",
+        "type": "dark",
+        "power": 60,
+        "accuracy": 100,
+        "category": "physical"
+      }
+    ],
+    "id": 10188
+  },
+  {
+    "name": "zamazenta-crowned",
+    "types": [
+      "fighting",
+      "steel"
+    ],
+    "base_stats": {
+      "hp": 92,
+      "attack": 120,
+      "defense": 140,
+      "special-attack": 80,
+      "special-defense": 140,
+      "speed": 128
+    },
+    "abilities": [
+      "dauntless-shield"
+    ],
+    "moves": [
+      {
+        "name": "body-slam",
+        "type": "normal",
+        "power": 85,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "take-down",
+        "type": "normal",
+        "power": 90,
+        "accuracy": 85,
+        "category": "physical"
+      },
+      {
+        "name": "bite",
+        "type": "dark",
+        "power": 60,
+        "accuracy": 100,
+        "category": "physical"
+      },
+      {
+        "name": "roar",
+        "type": "normal",
+        "power": null,
+        "accuracy": null,
+        "category": "status"
+      }
+    ],
+    "id": 10189
+  }
+]

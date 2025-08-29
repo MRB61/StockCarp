@@ -1,0 +1,258 @@
+
+<!--Time to learn some HTML buddy-->>
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>StockCarp Battle</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<style>
+.header{display:flex;align-items:center;gap:12px;margin:8px 0 16px}
+.logo{height:72px;width:auto;display:block} /* increased size */
+.title{margin:0}
+body{font-family:system-ui,Arial;margin:16px}
+.row{display:flex;gap:16px;flex-wrap:wrap}
+.card{border:1px solid #ddd;border-radius:10px;padding:12px;min-width:260px}
+.name{font-weight:700}
+.hpbar{height:14px;background:#eee;border-radius:7px;overflow:hidden}
+.hp{height:100%;background:#4caf50}
+.small{font-size:12px;color:#555}
+.sprite{width:80px;height:80px;object-fit:contain}
+.btn{padding:8px 12px;border:1px solid #333;background:#222;color:#fff;border-radius:8px;cursor:pointer}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+select{padding:6px;margin:6px 0}
+input[type=number]{padding:6px;margin:6px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mini{border:1px solid #eee;border-radius:8px;padding:6px;text-align:center}
+.pill{border:1px solid #888;border-radius:20px;padding:2px 8px;margin:2px;display:inline-block;font-size:12px}
+.log{white-space:pre-wrap;background:#fafafa;border:1px solid #ddd;border-radius:8px;padding:8px;max-height:240px;overflow:auto}
+</style>
+</head>
+<body>
+<div class="header">
+  <img src="/static/STOCKCARP_logo.png" alt="StockCarp logo" class="logo">
+  <h2 class="title">StockCarp — Web Prototype (Teams)</h2>
+</div>
+
+<div class="card">
+  <b>Select teams (each has 6; pick 4 in order — first 2 are active):</b>
+  <div class="row">
+    <div style="flex:1">
+      <div>AI Team: <select id="ai_team"></select></div>
+      <label class="small">
+        <input type="checkbox" id="ai_auto" checked>
+        Let AI auto-pick its 4 (uses team selector)
+      </label>
+      <div class="small">
+        Selector sims: <input id="ai_sims" type="number" value="100" min="1" style="width:90px">
+      </div>
+      <div id="ai_grid" class="grid"></div>
+      <div class="small">Selected (AI): <span id="ai_sel"></span></div>
+    </div>
+    <div style="flex:1">
+      <div>Your Team: <select id="you_team"></select></div>
+      <div id="you_grid" class="grid"></div>
+      <div class="small">Selected (You): <span id="you_sel"></span></div>
+    </div>
+  </div>
+  <div style="margin-top:8px">
+    <button class="btn" id="startBtn">Start Battle</button>
+  </div>
+</div>
+
+<div class="row" style="margin-top:12px">
+  <div class="card" style="flex:1">
+    <div>AI (Player 1)</div>
+    <div id="p1_active" class="row"></div>
+    <div class="small">Bench: <span id="p1_bench"></span></div>
+  </div>
+  <div class="card" style="flex:1">
+    <div>You (Player 2)</div>
+    <div id="p2_active" class="row"></div>
+    <div class="small">Bench: <span id="p2_bench"></span></div>
+  </div>
+</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row">
+    <div style="flex:1">
+      <div><b>Pick your actions</b></div>
+      <div>Slot 0: <select id="sel0"></select></div>
+      <div>Slot 1: <select id="sel1"></select></div>
+      <div style="margin-top:8px">
+        AI policy:
+        <select id="ai_policy">
+          <option value="mcts">MCTS</option>
+          <option value="greedy">Greedy</option>
+          <option value="random">Random</option>
+        </select>
+        Sims: <input id="sims" type="number" value="200" style="width:80px"/>
+        <button class="btn" id="goBtn" disabled>Submit Turn</button>
+      </div>
+    </div>
+    <div style="flex:1">
+      <div><b>Turn log</b></div>
+      <div id="log" class="log"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const SPRITE=id=>`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
+
+function hpPct(cur,mx){cur=Math.max(0,cur);mx=Math.max(1,mx);return Math.round(100*cur/mx)}
+function hpBar(cur,mx){const p=hpPct(cur,mx);return `<div class="hpbar"><div class="hp" style="width:${p}%"></div></div>`}
+function monCard(m){
+  if(!m || !m.alive) return `<div class="card"><div>Fainted</div></div>`;
+  return `<div class="card">
+    <div class="name">${m.name}</div>
+    <img class="sprite" src="${SPRITE(m.id)}" alt="${m.name}"/>
+    <div>${hpBar(m.hp,m.max_hp)}</div>
+    <div class="small">${m.hp}/${m.max_hp} ${m.status?("• "+m.status):""}</div>
+  </div>`;
+}
+function benchLine(list){return list.filter(x=>x.alive).map(x=>x.name).join(", ")||"—"}
+
+async function get(url){const r=await fetch(url);if(!r.ok) throw new Error(await r.text());return r.json()}
+async function post(url,body){const r=await fetch(url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});if(!r.ok) throw new Error(await r.text());return r.json()}
+function logDiv(text){const d=document.getElementById("log");d.textContent+=text;d.scrollTop=d.scrollHeight;}
+
+function renderState(st){
+  p1_active.innerHTML = st.p1.active.map(monCard).join("");
+  p2_active.innerHTML = st.p2.active.map(monCard).join("");
+  p1_bench.textContent = benchLine(st.p1.bench);
+  p2_bench.textContent = benchLine(st.p2.bench);
+  if(st.terminal){
+    goBtn.disabled=true;
+    const msg = st.result===1.0?"AI wins!":"You win!";
+    logDiv("[GAME END] "+msg+"\n");
+  }else{
+    goBtn.disabled=false;
+  }
+}
+
+function fillSelect(sel,acts){
+  sel.innerHTML="";
+  acts.forEach((a,i)=>{
+    const opt=document.createElement("option");
+    opt.value=JSON.stringify(a.payload);
+    opt.textContent=`[${i}] ${a.label}`;
+    sel.appendChild(opt);
+  })
+}
+async function refreshActions(){
+  const acts=await get("/api/legal_actions?side=1");
+  fillSelect(sel0,acts["0"]); fillSelect(sel1,acts["1"]);
+}
+
+function typePills(types){return (types||[]).map(t=>`<span class="pill">${t}</span>`).join("")}
+function miniCard(idx,mon,selArr,disableAll){
+  const checked = selArr.includes(idx);
+  const disabled = disableAll ? "disabled" : ((!checked && selArr.length>=4) ? "disabled" : "");
+  return `<div class="mini">
+    <div>${mon.name}</div>
+    <img class="sprite" src="${SPRITE(mon.id)}">
+    <div class="small">${typePills(mon.types)}</div>
+    <div><input type="checkbox" data-idx="${idx}" ${checked?"checked":""} ${disabled}> pick</div>
+  </div>`;
+}
+function renderTeamGrid(container, mons, selArr, selLabel, disableAll){
+  container.innerHTML = mons.map((m,i)=>miniCard(i,m,selArr,disableAll)).join("");
+  if(disableAll){
+    selLabel.textContent = "auto";
+    return;
+  }
+  container.querySelectorAll("input[type=checkbox]").forEach(cb=>{
+    cb.onchange = ()=>{
+      const i = +cb.getAttribute("data-idx");
+      const pos = selArr.indexOf(i);
+      if(cb.checked){
+        if(pos===-1 && selArr.length<4) selArr.push(i);
+      }else{
+        if(pos!==-1) selArr.splice(pos,1);
+      }
+      selLabel.textContent = JSON.stringify(selArr);
+      renderTeamGrid(container, mons, selArr, selLabel, false); // re-render to enforce disabling
+    };
+  });
+}
+
+const ai_team = document.getElementById("ai_team");
+const you_team = document.getElementById("you_team");
+const ai_grid = document.getElementById("ai_grid");
+const you_grid = document.getElementById("you_grid");
+const ai_sel_label = document.getElementById("ai_sel");
+const you_sel_label = document.getElementById("you_sel");
+const ai_auto = document.getElementById("ai_auto");
+const ai_sims = document.getElementById("ai_sims");
+const startBtn = document.getElementById("startBtn");
+const goBtn = document.getElementById("goBtn");
+const sel0 = document.getElementById("sel0");
+const sel1 = document.getElementById("sel1");
+
+let AI_MON_LIST=[], YOU_MON_LIST=[];
+let AI_PICK=[], YOU_PICK=[];
+
+async function loadTeams(){
+  const t = await get("/api/teams");
+  ai_team.innerHTML = t.teams.map(n=>`<option value="${n}">${n}</option>`).join("");
+  you_team.innerHTML = t.teams.map(n=>`<option value="${n}">${n}</option>`).join("");
+  await loadTeamSide(true); await loadTeamSide(false);
+}
+async function loadTeamSide(isAI){
+  const name = isAI ? ai_team.value : you_team.value;
+  const data = await get(`/api/team?name=${encodeURIComponent(name)}`);
+  if(isAI){
+    AI_MON_LIST = data.mons; AI_PICK = [];
+    renderTeamGrid(ai_grid, AI_MON_LIST, AI_PICK, ai_sel_label, ai_auto.checked);
+    ai_sel_label.textContent = ai_auto.checked ? "auto" : "[]";
+  }else{
+    YOU_MON_LIST = data.mons; YOU_PICK = [];
+    renderTeamGrid(you_grid, YOU_MON_LIST, YOU_PICK, you_sel_label, false);
+    you_sel_label.textContent = "[]";
+  }
+}
+ai_team.onchange = ()=>loadTeamSide(true);
+you_team.onchange = ()=>loadTeamSide(false);
+ai_auto.onchange = ()=>{
+  // re-render AI grid with disabled/enabled checkboxes
+  renderTeamGrid(ai_grid, AI_MON_LIST, AI_PICK, ai_sel_label, ai_auto.checked);
+  ai_sel_label.textContent = ai_auto.checked ? "auto" : JSON.stringify(AI_PICK);
+};
+
+startBtn.onclick = async ()=>{
+  if(YOU_PICK.length!==4){ alert("Pick exactly 4 for your team"); return; }
+  if(!ai_auto.checked && AI_PICK.length!==4){ alert("Pick exactly 4 for AI (or enable auto-pick)"); return; }
+  const body = {
+    ai_team: ai_team.value,
+    you_team: you_team.value,
+    you_pick: YOU_PICK,
+    ai_auto: ai_auto.checked,
+    ai_pick: ai_auto.checked ? null : AI_PICK,
+    sims: +ai_sims.value || 100,
+    seed: 123
+  };
+  const st = await post("/api/new_game_teams", body);
+  document.getElementById("log").textContent="";
+  renderState(st); await refreshActions();
+};
+
+goBtn.onclick = async ()=>{
+  const a0=sel0.value?JSON.parse(sel0.value):null;
+  const a1=sel1.value?JSON.parse(sel1.value):null;
+  const you_actions=[a0,a1].filter(Boolean);
+  const policy=document.getElementById("ai_policy").value;
+  const sims=+document.getElementById("sims").value||200;
+  const res=await post("/api/act",{you_actions, ai_policy:policy, sims, seed:123});
+  document.getElementById("log").textContent += res.log.join("\n")+"\n";
+  renderState(res.state); await refreshActions();
+};
+
+// boot
+loadTeams().catch(e=>console.error(e));
+</script>
+</body>
+</html>
+
+
