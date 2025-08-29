@@ -16,9 +16,14 @@ The two main algorithms are a basic UCT for move selection during battle, and a 
 -Host a Web where anyone can play against my AI's.
 
 **PLAY!**
-You can play on the terminal running the play_cli.py or on a really basic UI running a uvicorn and the server.py. There are some pre-made teams.
+You can play on the terminal running the play_cli.py or on a really basic UI running a uvicorn and the server.py. 
+
+There are some pre-made teams.
+
 -Victor's WCS (Spanish GOAT)
+
 -James Evans's WCS (It is actually giovani's) :D
+
 -My_team (What I currently play)
 
 
