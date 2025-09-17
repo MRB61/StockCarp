@@ -2,11 +2,10 @@
 <img src="static/STOCKCARP_logo.png" alt="StockCarp logo" width="120" />
 I was interested in Monte Carlo Tree Search and I love pokemon, so I created StockCarp.
 
-****NEWS****
+# NEWS!
 
 
-
-You can play against StockCarp on showdown VGC 2025 reg I. Just challenge and it will accept if it is live at the moment.
+You can play against StockCarp on Showdown VGC 2025 reg I. Just challenge, and it will accept if it is live at the moment.
 
 
 
