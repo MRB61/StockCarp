@@ -2,6 +2,13 @@
 <img src="static/STOCKCARP_logo.png" alt="StockCarp logo" width="120" />
 I was interested in Monte Carlo Tree Search and I love pokemon, so I created StockCarp.
 
+**NEWS** 
+You can play against StockCarp on showdown VGC 2025 reg I. Just challenge and it will accept if it is live at the moment.
+
+
+
+
+
 StockCarp is a battling bot for the competitive pokemon format VCG. Everything is coded from scratch.
 
 I am aware that there is a whole infrastructure with smogon and pokemon showdown where I could implement it faster. But I was interested in improving my coding so I recreated the whole pokemon battle enviorment.
@@ -13,9 +20,12 @@ The two main algorithms are a basic UCT for move selection during battle, and a 
 
 -Continue including secondary effects of moves.
 
--Host a Web where anyone can play against my AI's.
+-Modify the UCT algorithm.
 
 **PLAY!**
+
+For the local engine:
+
 You can play on the terminal running the play_cli.py or on a really basic UI running a uvicorn and the server.py. 
 
 There are some pre-made teams.
